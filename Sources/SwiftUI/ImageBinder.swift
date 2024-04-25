@@ -50,7 +50,7 @@ extension KFImage {
 
         private(set) var animating = false
 
-        var loadedImage: KFCrossPlatformImage? = nil { willSet { objectWillChange.send() } }
+        weak var loadedImage: KFCrossPlatformImage? = nil { willSet { objectWillChange.send() } }
         var progress: Progress = .init()
 
         func markLoading() {
